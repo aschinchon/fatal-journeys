@@ -96,9 +96,8 @@ MM %>%
 
 coordinates(df4) = ~lon+lat
 
-leaflet() %>% addTiles() %>%
+leaflet() %>% addProviderTiles(providers$CartoDB.Positron) %>%
   addMarkers(data=df4,
              popup=~popup,
              clusterOptions = markerClusterOptions())
-
 
